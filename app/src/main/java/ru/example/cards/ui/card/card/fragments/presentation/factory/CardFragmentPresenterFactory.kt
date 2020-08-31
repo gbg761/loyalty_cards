@@ -16,14 +16,9 @@ class CardFragmentPresenterFactory {
 
     companion object {
 
-        fun createAllCardFragmentPresenters(
-            context: Context,
-            intent: Intent
-        ): Map<String, CardFragmentPresenter> {
-
+        fun createAllCardFragmentPresenters(context: Context, intent: Intent): Map<String, CardFragmentPresenter> {
 
             val uri = intent.data
-
             val cardId = intent.extras?.get(Constants.OPEN_CARD_EXTRA) as Long?
 
             val interactor: CardFragmentInteractor =
